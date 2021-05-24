@@ -23,6 +23,16 @@ This application have been refactored from a global state application that I wor
 
 https://drive.google.com/file/d/1g9qvnRCBczXzeFMJirCQ0OYCEHGENo06/view
 
+## Snapshots
+
+![Screen Shot 2021-05-24 at 11 34 59 AM](https://user-images.githubusercontent.com/69886471/119396263-41365f80-bc9a-11eb-8a36-996a573894ec.png)
+![Screen Shot 2021-05-24 at 11 35 09 AM](https://user-images.githubusercontent.com/69886471/119396309-514e3f00-bc9a-11eb-8e01-ebeb9f2e538a.png)
+![Screen Shot 2021-05-24 at 11 35 39 AM](https://user-images.githubusercontent.com/69886471/119396351-5ad7a700-bc9a-11eb-9f3b-b1728d91a3fb.png)
+![Screen Shot 2021-05-24 at 12 38 58 PM](https://user-images.githubusercontent.com/69886471/119396384-63c87880-bc9a-11eb-8027-c684946a033d.png)
+![Screen Shot 2021-05-24 at 12 41 29 PM](https://user-images.githubusercontent.com/69886471/119396450-76db4880-bc9a-11eb-95f2-b99c46f7d8d9.png)
+![Screen Shot 2021-05-24 at 12 43 04 PM](https://user-images.githubusercontent.com/69886471/119396477-7fcc1a00-bc9a-11eb-8120-f9f7925886d8.png)
+
+
 ## Links 
 
 ### Heroku
