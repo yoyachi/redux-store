@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { pluralize } from "../../utils/helpers"
-import { useStoreContext } from "../../utils/GlobalState";
+import { useDispatch, useSelector } from 'react-redux';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
 function ProductItem(item) {
-  const [state, dispatch] = useStoreContext();
+  const dispatch = useDispatch();
+  const state = useSelector(state => state);
 
   const {
     image,
@@ -18,10 +19,8 @@ function ProductItem(item) {
 
   const { cart } = state
 
-  // find the cart item with the matching id
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
-    // if there was a match, call UPDATE with a new purchase quantity
     if (itemInCart) {
       dispatch({
         type: UPDATE_CART_QUANTITY,
@@ -60,5 +59,3 @@ function ProductItem(item) {
 }
 
 export default ProductItem;
-
-

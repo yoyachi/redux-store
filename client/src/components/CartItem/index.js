@@ -1,20 +1,18 @@
 import React from 'react';
-import { useStoreContext } from "../../utils/GlobalState";
+import { useDispatch } from 'react-redux';
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
 const CartItem = ({ item }) => {
-
-  const [, dispatch] = useStoreContext();
+  const dispatch = useDispatch();
 
   const removeFromCart = item => {
     dispatch({
       type: REMOVE_FROM_CART,
       _id: item._id
     });
-    // Added update Cart Items for offline data  persistence even being offline to consider changes in cart
-    
     idbPromise('cart', 'delete', { ...item });
+
   };
 
   const onChange = (e) => {
@@ -24,7 +22,6 @@ const CartItem = ({ item }) => {
         type: REMOVE_FROM_CART,
         _id: item._id
       });
-      
       idbPromise('cart', 'delete', { ...item });
 
     } else {
@@ -34,9 +31,10 @@ const CartItem = ({ item }) => {
         purchaseQuantity: parseInt(value)
       });
       idbPromise('cart', 'put', { ...item, purchaseQuantity: parseInt(value) });
+
     }
   }
-//JSX
+
   return (
     <div className="flex-row">
       <div>

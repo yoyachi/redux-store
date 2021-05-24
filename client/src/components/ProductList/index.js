@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ProductItem from "../ProductItem";
-import { useStoreContext } from "../../utils/GlobalState";
+import { useDispatch, useSelector } from 'react-redux';
 import { UPDATE_PRODUCTS } from "../../utils/actions";
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_PRODUCTS } from "../../utils/queries";
@@ -8,21 +8,19 @@ import { idbPromise } from "../../utils/helpers";
 import spinner from "../../assets/spinner.gif"
 
 function ProductList() {
-  const [state, dispatch] = useStoreContext();
+  const dispatch = useDispatch();
+  const state = useSelector(state => state);
 
   const { currentCategory } = state;
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
   useEffect(() => {
-    // if there's data to be stored
     if(data) {
-    // let's store it in the global state object
       dispatch({
            type: UPDATE_PRODUCTS,
           products: data.products
         });
-        // but let's also take each product and save it to IndexedDB using the helper function 
         data.products.forEach((product) => {
           idbPromise('products', 'put', product);
         });
@@ -70,5 +68,3 @@ function ProductList() {
 }
 
 export default ProductList;
-
-
