@@ -1,3 +1,4 @@
+
 # Redux-Store
 
 ## Description
@@ -42,7 +43,7 @@ https://github.com/yoyachi/redux-store
 ![Screen Shot 2021-05-24 at 12 38 58 PM](https://user-images.githubusercontent.com/69886471/119396384-63c87880-bc9a-11eb-8027-c684946a033d.png)
 ![Screen Shot 2021-05-24 at 12 41 29 PM](https://user-images.githubusercontent.com/69886471/119396450-76db4880-bc9a-11eb-95f2-b99c46f7d8d9.png)
 ![Screen Shot 2021-05-24 at 12 43 04 PM](https://user-images.githubusercontent.com/69886471/119396477-7fcc1a00-bc9a-11eb-8120-f9f7925886d8.png)
-
+![Screen Shot 2021-05-26 at 4 14 17 PM](https://user-images.githubusercontent.com/69886471/119732213-88108a80-be3d-11eb-8044-8ed2689ff7d7.png)
 
 ## License
 
